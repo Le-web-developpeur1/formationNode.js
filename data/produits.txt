@@ -1,0 +1,4 @@
+Ordinateurs, 50
+Tables, 60
+Chaises, 120
+Telephones, 58
