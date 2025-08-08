@@ -12,7 +12,12 @@ import fs from 'fs';
 
 dotenv.config();
 console.log("📁 Fichier .env existe :", fs.existsSync('.env'));
-const PORT = process.env.PORT;
+const PORT = parseInt(process.env.PORT, 10) || 3000;
+
+if (!PORT || isNaN(PORT)) {
+  throw new Error("❌ PORT invalide ou non défini");
+}
+
 const app = express();
 
 connectDb();
